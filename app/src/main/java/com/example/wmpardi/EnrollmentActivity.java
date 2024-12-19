@@ -1,13 +1,14 @@
-package com.example.finalexamgilang;
+package com.example.wmpardi;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.auth.FirebaseAuth;
@@ -94,6 +95,7 @@ public class EnrollmentActivity extends AppCompatActivity {
                             // Create a new checkbox for each subject
                             CheckBox checkBox = new CheckBox(EnrollmentActivity.this);
                             checkBox.setText(String.format("%s (%s credits)", subjectName, creditsString));
+                            checkBox.setTextColor(ContextCompat.getColor(EnrollmentActivity.this, R.color.defaultColor));
 
                             checkBoxContainer.addView(checkBox);
 

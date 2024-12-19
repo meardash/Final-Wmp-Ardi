@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Final Exam Gilang"
+rootProject.name = "Final Wmp Ardi"
 include(":app")
  

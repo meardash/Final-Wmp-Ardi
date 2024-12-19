@@ -2,4 +2,33 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="summary_background">#FFEBEE</color> <!-- Light red example -->
+    <!-- Background Gradient -->
+    <color name="backgroundGradient">#E3F2FD</color>
+
+    <!-- Text Colors -->
+    <color name="primaryText">#0D47A1</color> <!-- Deep blue -->
+    <color name="secondaryText">#1976D2</color> <!-- Medium blue -->
+
+    <!-- Accent Colors -->
+    <color name="primaryAccent">#FF6F00</color> <!-- Vibrant orange -->
+    <color name="buttonColor">#FF8F00</color> <!-- Light orange -->
+
+    <color name="background_color">#F5F5F5</color> <!-- Light gray -->
+    <color name="title_color">#3F51B5</color> <!-- Indigo -->
+    <color name="text_color">#4CAF50</color> <!-- Green -->
+    <color name="divider_color">#BDBDBD</color> <!-- Gray -->
+
+    <color name="section_background">#FFFFFF</color> <!-- White for sections -->
+    <color name="section_title_color">#FF9800</color> <!-- Orange for section titles -->
+
+    <color name="icon_color">#FF0000</color> <!-- Example: Red color -->
+    <color name="selectedColor">#FF6347</color> <!-- Tomato color -->
+    <color name="defaultColor">#000000</color> <!-- Black -->
+
+    <color name="button_color">#5E35B1</color>
+    <color name="secondary_button_color">#7E57C2</color>
+    <color name="primary_color">#FF0000</color> <!-- Red, change this to your preferred color -->
+    <color name="default_text_color">#000000</color> <!-- Black color -->
+
 </resources>

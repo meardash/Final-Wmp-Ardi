@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "473455970631",
-    "project_id": "final-exam-wmp-a57d2",
-    "storage_bucket": "final-exam-wmp-a57d2.firebasestorage.app"
+    "project_number": "66328316854",
+    "project_id": "wmp-final-ardi",
+    "storage_bucket": "wmp-final-ardi.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:473455970631:android:dafd24ca063c2fff2de462",
+        "mobilesdk_app_id": "1:66328316854:android:8c285d494c828653c78f17",
         "android_client_info": {
-          "package_name": "com.example.finalexamgilang"
+          "package_name": "com.example.wmpardi"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCwLvrem34GgAkcrqX1CSZtc_S8Va1dnI0"
+          "current_key": "AIzaSyAv8Aw59lD0MCB5wc1BOc64kkBznmn31d4"
         }
       ],
       "services": {

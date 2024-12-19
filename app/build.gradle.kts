@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.finalexamgilang"
+    namespace = "com.example.wmpardi"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.finalexamgilang"
+        applicationId = "com.example.wmpardi"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

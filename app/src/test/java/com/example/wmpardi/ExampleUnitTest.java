@@ -1,4 +1,4 @@
-package com.example.finalexamgilang;
+package com.example.wmpardi;
 
 import org.junit.Test;
 

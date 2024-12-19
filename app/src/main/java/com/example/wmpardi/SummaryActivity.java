@@ -1,9 +1,14 @@
-package com.example.finalexamgilang;
+package com.example.wmpardi;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.ImageSpan;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -57,19 +62,39 @@ public class SummaryActivity extends AppCompatActivity {
                         // Cast "subjects" field to a Map
                         Map<String, Object> subjectsMap = (Map<String, Object>) documentSnapshot.get("subjects");
 
+                        // Create a SpannableStringBuilder to add bullet points and text
+                        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
+
                         // Iterate through the map
                         for (Map.Entry<String, Object> entry : subjectsMap.entrySet()) {
                             String subjectName = entry.getKey();
                             int credits = ((Long) entry.getValue()).intValue();
 
-                            // Append subject name and credits to the display
-                            subjects.append(subjectName).append("\n");
+                            // Add bullet point image to the SpannableStringBuilder
+                            Drawable bulletDrawable = ContextCompat.getDrawable(SummaryActivity.this, R.drawable.ic_bullet_point);
+                            if (bulletDrawable != null) {
+                                bulletDrawable.setBounds(0, 0, bulletDrawable.getIntrinsicWidth(), bulletDrawable.getIntrinsicHeight());
+                            }
+
+                            // Create ImageSpan for the bullet point
+                            ImageSpan bulletSpan = new ImageSpan(bulletDrawable, ImageSpan.ALIGN_BASELINE);
+                            spannableStringBuilder.append(" "); // Add a space for the bullet placeholder
+                            spannableStringBuilder.setSpan(bulletSpan, spannableStringBuilder.length() - 1, spannableStringBuilder.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+
+                            spannableStringBuilder.append("\u00A0\u00A0"); // Add two non-breaking spaces for proper spacing
+
+                            // Append the subject name
+                            spannableStringBuilder.append(subjectName).append("\n");
+
+                            // Add credits to the total
                             totalCredits += credits;
                         }
+
+                        // Set the spannable string to the TextView
+                        textViewSubjects.setText(spannableStringBuilder);
                     }
 
-                    // Display the subjects and total credits
-                    textViewSubjects.setText(subjects.toString());
+                    // Display the total credits
                     textViewTotalCredits.setText("Total Credits: " + totalCredits);
                 } else {
                     // Handle case where no enrollment data exists
